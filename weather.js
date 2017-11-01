@@ -27,14 +27,26 @@
 // .append() appends a string (containing HTML) to a jQuery DOM object
 
 let handleWeatherResponse = function(response) {
-  // leave these two lines alone; they allow for the inspection of 
+  // leave these two lines alone; they allow for the inspection of
   // the response object in the browser console
   console.log(response)
   window.response = response
 
   // **** your code starts here - don't modify anything else. you will be sad.
 
-  
+$(".forecast").empty();
+let markup = "";
+for (i = 0; i < 6; i++) {
+  markup += "<div class='col'>";
+  markup += "<h3>" + icon (response.daily.data[i]);
+  markup += "<h4>" + Math.round(response.daily.data[i].apparentTemperatureLow) + "|" + Math.round(response.daily.data[i].apparentTemperatureHigh) + "</h4>";
+  markup += "<h7>" + response.daily.data[i].summary + "</h7>";
+  markup += "</div>";
+}
+
+$(".forecast").append(markup);
+$(".forecast").fadeIn(2000);
+
   // *** your code ends here - no, really.
 };
 

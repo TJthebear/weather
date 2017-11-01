@@ -12,8 +12,24 @@ body {
   color: #fff;
 }
 
-h1, h2, h5 {
+h1, h2 {
   font-weight: 300;
+}
+
+h5 {
+  color: grey;
+  font-size: 30px;
+  font-family: 'Arvo', serif;;
+  font-weight: bold;
+  text-align: center;
+}
+
+h6 {
+  color: grey;
+  font-size: 30px;
+  font-family: 'Arvo', serif;;
+  text-align: center;
+  margin-top:40px;
 }
 
 .row {
@@ -22,4 +38,10 @@ h1, h2, h5 {
 
 i.fa {
   font-size: 100px;
+}
+
+.btn {
+font-family: 'Arvo', serif;
+margin-top: 15px;
+text-align: center;
 }
